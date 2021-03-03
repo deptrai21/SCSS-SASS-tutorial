@@ -1,0 +1,22 @@
+@import "variables";
+
+a::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1.5px;
+  background-color: $secondary-color;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.3s linear;
+  transform: scaleX(0);
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+.log-in::after {
+  @extend a::after;
+}

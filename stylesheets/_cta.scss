@@ -1,0 +1,26 @@
+@import "variables";
+
+.sign-up {
+  border: 2px solid $primary-color;
+  border-radius: 20px;
+  padding: 0.4em;
+  transition: all 0.3s linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+}
+
+.cta-dl {
+  @extend .sign-up;
+  margin: 20px auto;
+  text-align: center;
+  width: 200px;
+  &:hover {
+    background-color: rgb(86, 86, 245);
+    color: white;
+    border: rgb(86, 86, 245);
+  }
+}

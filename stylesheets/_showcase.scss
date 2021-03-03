@@ -1,0 +1,143 @@
+@import "variables";
+
+.showcase-item {
+  display: grid;
+  place-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  color: white;
+  width: 400px;
+  height: 500px;
+
+  p {
+    position: absolute;
+    top: 10px;
+    font-weight: map-get($font-weights, medium);
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .hover-h1 {
+    display: none;
+  }
+
+  &:hover {
+    h1 {
+      display: none;
+    }
+
+    .hover-h1 {
+      display: block;
+    }
+  }
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-auto-rows: auto;
+  place-items: center;
+  gap: 20px;
+  .item1 {
+    background-image: url("../assets/pic1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      background-image: none;
+      background-color: burlywood;
+    }
+  }
+
+  .item2 {
+    background-color: rgb(124, 185, 226);
+
+    &:hover {
+      background-color: rgb(226, 219, 124);
+    }
+  }
+
+  .item3 {
+    background-image: url("../assets/pic2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      background-image: none;
+      background-color: rgb(124, 226, 213);
+    }
+  }
+
+  .item4 {
+    background-color: rgb(240, 181, 104);
+
+    &:hover {
+      color: rgb(78, 119, 173);
+    }
+  }
+
+  .item5 {
+    background-color: rgb(106, 190, 158);
+
+    &:hover {
+      color: rgb(29, 82, 92);
+    }
+  }
+
+  .item6 {
+    background-image: url("../assets/pic3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      background-image: none;
+      background-color: rgb(139, 124, 226);
+    }
+  }
+
+  .item7 {
+    background-color: rgb(250, 175, 106);
+
+    &:hover {
+      color: rgb(73, 70, 109);
+    }
+  }
+
+  .item8 {
+    background-image: url("../assets/pic6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      background-image: none;
+      background-color: rgb(209, 102, 209);
+    }
+  }
+
+  .item9 {
+    background-image: url("../assets/pic4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      background-image: none;
+      background-color: rgb(115, 103, 187);
+    }
+  }
+
+  .item10 {
+    background-color: rgb(72, 49, 92);
+
+    &:hover {
+      color: rgb(214, 66, 140);
+    }
+  }
+}

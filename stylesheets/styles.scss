@@ -1,0 +1,100 @@
+@import "reset";
+@import "variables";
+@import "grid-layout";
+@import "animations";
+@import "cta";
+@import "showcase";
+@import "display";
+
+@mixin flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  @include flexbox();
+  color: $primary-color;
+  background: $secondary-color;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+
+  .brand {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  .nav-lists {
+    @include flexbox();
+    list-style: none;
+    width: 500px;
+
+    .nav-items {
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        position: relative;
+        font-weight: map-get($font-weights, regular);
+      }
+    }
+  }
+
+  .account {
+    @include flexbox();
+    width: 150px;
+    margin-right: 20px;
+
+    .log-in {
+      cursor: pointer;
+      position: relative;
+    }
+  }
+
+  &:hover {
+    background-color: $primary-color !important;
+    color: $secondary-color;
+
+    .nav-items a {
+      color: $secondary-color;
+    }
+
+    .sign-up {
+      border: 2px solid $secondary-color !important;
+    }
+  }
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+  color: $primary-color;
+  .hero-content {
+    text-align: center;
+    max-width: 900px;
+
+    .hero-title {
+      margin: 20px;
+      font-size: 3rem;
+    }
+
+    .hero-sub-title {
+      margin: 20px;
+      font-weight: map-get($font-weights, medium);
+      font-size: 2rem;
+    }
+
+    .cta {
+      margin: 20px;
+
+      a {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  margin: 20px;
+}
